@@ -808,50 +808,105 @@ function doBanner(){
 let _neoIdx = -1;
 function doNeofetch(){
   const arts = [
-    // 1: Kali dragon
+    // 1: Real Shiba photo ASCII
     [
-      '    //   ) )         ',
-      '   //___/ /  __  ___ ',
-      '  / __  (  //  )//   ',
-      ' //    ) )//   //    ',
-      '//____/ /(___ ((_____',
+      '                           ..                 ',
+      ' .,.                  .,,,,::.                ',
+      ' .,.                  .,:;;;;.                ',
+      ' .,.    ..             .,;|||:..,::::;|;;;;;::',
+      ' .,,....,.            .:|oO0OOOOO000#0o||||ooo',
+      ' .,:;;:;|;;:,.   .:|ooO#0oooooOoooo|||:,,,,:;|',
+      '        ..,::;::;||;,,|oOO00000O||||;:,,....,: ',
+      '             .  ..,. .;oo0#@@@0oo|||;:,,.....: ',
+      '.                    .:||O##@#OooOo||;:,...... ',
+      ';o:                  .,;|||oOOoO000Oo|;:,...., ',
+      ';||.                 .,,:;|||o|oO0##00o;,,...: ',
+      '                    .,:;:::;||oO0@@####O;:..:| ',
+      '                 .,:;|o||;::;|oo||o0##@#o;,,;| ',
+      '               ,;|||;:,..  .,:;,...,;|OOo|:,;o ',
+      '              ,;;:::.                .;oo|;:|0  ',
+      '              .,,,.                   ;0@#o;|O  ',
+      '               ..                    :0#@@0o|| ',
+      '                                 ..,:|o#@000o; ',
+      '                      ....    .,|0#O||0#@#OOOo ',
+      '                     .....   ..:oOOOoO#@@OoO## ',
+      '                      ....    ..,:|OO0##0o|||| ',
+      '                      ..         .,;||||;,..   ',
     ],
-    // 2: Skull
+    // Dog face v2 - zoomed snout
     [
-      '  _____   ',
-      ' /     \\  ',
-      '| () () | ',
-      ' \\  ^  /  ',
-      '  |||||   ',
-      '  |||||   ',
+      '  ,.    ..   ....,:;;oooooooo0000',
+      '         .  ..,:;oo00000000000000',
+      '  ..      ..,;o0000000####0000000',
+      '        .,;o000####@@@@###0000000',
+      '      .,;o00###@@@@@@@@###000oooo',
+      '    .,,;o0###@@@@@@@@@###0oooo;;;',
+      '   ..,;o0##@@@@@@@@@##0oooo;;:,, ',
+      '   .,;o0#@@@@@@@@##0ooo;;:,,..   ',
+      '   .,;o0#@@@@@##0ooo;:,,...      ',
+      '   .,:o0##@@##0ooo;:,...         ',
+      '    .,;o0###0ooo;:,...           ',
+      '    ..,;oo000oo;:,...            ',
+      '      ..,;oooo;:,...     woof!   ',
+      '        ..,;o;:,...              ',
+      '          ..,::,...              ',
+      '           ..,,,...              ',
+      '            ....,...             ',
+      '             .......             ',
     ],
-    // 3: Lock
+    // Dog eyes close-up
     [
-      '  ______  ',
-      ' /  __  \\ ',
-      '|  /  \\  |',
-      '|  \\__/  |',
-      '|  _  _  |',
-      '| |_||_| |',
-      '|________|',
+      '                                  ',
+      '   .,,....          ....,,,,,..   ',
+      '  ,o000ooo;,.    .,;ooo0000000o,  ',
+      ' ,o0###@@#00o;,,;o00##@@@@@##00o, ',
+      ' ;0##@@@@@##0oooo0##@@@@@@@##000; ',
+      ' ;0##@@@@@@#########@@@@@@@@##00; ',
+      ' ,o0##@@@@@@@@@@@@@@@@@@@###000o, ',
+      '  ,;o000##@@@@@@@@@@@@##000oo;,.  ',
+      '    .,;ooo000000##000000ooo;,.     ',
+      '       ..,;;oooooooooo;;,..        ',
+      '  much hacker  .  very terminal   ',
+      '      wow  .  such pwn  .  wow    ',
+      '                                  ',
+      '         /\\_____/\\               ',
+      '        (  o   o  )              ',
+      '         \\  w w  /              ',
+      '          \\_____/               ',
+      '           woof!!               ',
     ],
-    // 4: Terminal
+    // Shibe doge meme style
     [
-      ' ___________',
-      '|  _______  |',
-      '| | >_    | |',
-      '| |______| |',
-      '|___________|',
-      '  \\_______/  ',
+      '      /\\_____/\\                 ',
+      '     /  o   o  \\                ',
+      '    ( ==  ^  == )               ',
+      '     )         (                ',
+      '    (           )               ',
+      '   ( (  )   (  ) )              ',
+      '  (__(__)___(__)__)              ',
+      '                                 ',
+      '  wow      such hacker           ',
+      '     very terminal    much pwn   ',
+      '  so OSINT    wow     very CTF   ',
+      '     such skills      many tools ',
+      '  wow           very sec    wow  ',
+      '                                 ',
+      '  -- doge approves ur portfolio  ',
     ],
-    // 5: Hacker
+    // Minimal dog + stats
     [
-      ' /\\  /\\  ',
-      '//\\\\//\\\\ ',
-      '\\\\//\\\\// ',
-      ' \\/  \\/  ',
-      ' |hack| ',
-      ' |_er_| ',
+      '    .  .  .                      ',
+      '  (\\(\\                          ',
+      '  ( -.-)  hi im the portfolio dog',
+      '  o_(\")(\")`                     ',
+      '                                 ',
+      '  breed  : shiba inu             ',
+      '  skill  : sniffing packets 🐾  ',
+      '  hobby  : barking at port 80    ',
+      '  status : very good boy ✓      ',
+      '  threat : maximum woof          ',
+      '                                 ',
+      '  [woof] [woof] [WOOF]           ',
     ],
   ];
 
@@ -1038,8 +1093,11 @@ async function sbGet(){
   try {
     const r=await fetch(`${SUPABASE_URL}/rest/v1/stats?id=eq.1&select=visitors,likes`,
       { headers:{ apikey:SUPABASE_ANON, Authorization:`Bearer ${SUPABASE_ANON}` }});
-    const d=await r.json(); return d[0]||null;
-  } catch(e){ return null; }
+    const text=await r.text();
+    console.log('SB STATUS:', r.status, 'BODY:', text);
+    if(!r.ok) return null;
+    const d=JSON.parse(text); return d[0]||null;
+  } catch(e){ console.error('SB ERROR:',e); return null; }
 }
 async function sbPatch(data){
   if(!_ready) return;
