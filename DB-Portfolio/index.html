@@ -756,6 +756,28 @@ function doProjects(){
       tech:   ['OSINT','DNS Lookup','WHOIS','Port Scan','Subdomain Enum','GeoIP','HTTP Headers','IP Tracer'],
       url:    'https://recon-kit.vercel.app/',
     },
+     {
+      name:   'WEBSEC-PROBE',
+      tag:    'VAPT AUDITOR',
+      status: 'LIVE',
+      desc:   [
+        'Autonomous web security headers, SSL/TLS 1.3 cryptography, and edge WAF posture auditor.',
+        'Audits perimeter defenses, inspects 7 HTTP directives, and exports comprehensive VAPT audit reports.',
+      ],
+      tech:   ['Python', 'Kali Linux', 'VAPT', 'SSL/TLS 1.3', 'WAF Fingerprinting', 'Security Headers', 'PDF Export', 'CLI'],
+      url:    'https://websec-probe-ten.vercel.app/',
+    },
+     {
+      name:   'SCAN-SENSEI',
+      tag:    'NETWORK TRIAGE',
+      status: 'LIVE / PyPI',
+      desc:   [
+        'Human-friendly Nmap scan translator & triage engine for Kali Linux.',
+        'Converts dense, cryptic port banners and flags into plain English cards with instant threat analysis.',
+      ],
+      tech:   ['Python', 'Nmap', 'Kali Linux', 'Network Triage', 'CVE Analysis', 'Flag Encyclopedia', 'PyPI', 'Rich TUI'],
+      url:    'https://scan-sensei.vercel.app/',
+    },
   ];
 
   ln('┌─ projects/ '+'─'.repeat(37),'dim'); br();
